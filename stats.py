@@ -11,3 +11,8 @@ def count_each_char(string):
         else:
             num_chars[char] = 1
     return num_chars
+
+def sort_num_chars(num_chars):
+    list = [(char, count) for char, count in num_chars.items()]
+    list.sort(key=lambda tup : tup[1], reverse=True)
+    return list
