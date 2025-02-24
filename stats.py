@@ -13,6 +13,6 @@ def count_individual_chars(string):
     return char_counts
 
 def prettify_char_counts(num_chars):
-    list = [(char, count) for char, count in num_chars.items()]
+    list = [(char, count) for char, count in num_chars.items() if char.isalpha()]
     list.sort(key=lambda tup : tup[1], reverse=True)
     return list
